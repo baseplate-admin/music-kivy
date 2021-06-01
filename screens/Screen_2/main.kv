@@ -1,0 +1,14 @@
+<ScreenTwo>
+    name: "scr 2"
+
+    MDToolbar:
+        id: toolbar
+        pos_hint: {"top": 1}
+        elevation: 10
+        title: "MDNavigationDrawer"
+        left_action_items: [["menu", lambda x: app.root.ids.nav_drawer.set_state("open")]]
+
+    MDLabel:
+        text: "Screen 2"
+        halign: "center"
+

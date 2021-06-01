@@ -1,0 +1,37 @@
+#:include screens/Screen_1/main.kv
+#:include screens/Screen_2/main.kv
+
+<ContentNavigationDrawer>:
+
+    ScrollView:
+
+        MDList:
+
+            OneLineListItem:
+                text: "Screen 1"
+                on_press:
+                    app.root.ids.nav_drawer.set_state("close")
+                    app.root.ids.screen_manager.current = "scr 1"
+
+            OneLineListItem:
+                text: "Screen 2"
+                on_press:
+                    app.root.ids.nav_drawer.set_state("close")
+                    app.root.ids.screen_manager.current = "scr 2"
+
+
+Screen:
+
+    NavigationLayout:
+
+        ScreenManager:
+            id: screen_manager
+
+            ScreenOne:
+
+            ScreenTwo:
+
+        MDNavigationDrawer:
+            id: nav_drawer
+
+            ContentNavigationDrawer:
