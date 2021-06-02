@@ -13,8 +13,10 @@
         on_press:
             root.open_menu()
 
-        MDLabel:
-            size_hint: (None, .8)
-            theme_text_color: 'Custom'
-            text_color: rgba('#92a3ab')
-            text: root.right_text
+        FloatLayout:
+            MDLabel:
+                size_hint: (None, .8)
+                pos_hint: {"center_x": -.15, "y": .4}
+                theme_text_color: 'Custom'
+                text_color: rgba('#92a3ab')
+                text: root.right_text
