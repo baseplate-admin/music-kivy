@@ -1,0 +1,22 @@
+##:kivy
+
+#:import rgba kivy.utils.get_color_from_hex
+
+<MusicListWithDropdown>
+    IconLeftWidget:
+        icon: root.left_icon
+    
+    IconRightWidget:
+        icon: root.right_icon
+        id: music_list_icon_right
+
+        on_press:
+            root.open_menu()
+
+        FloatLayout:
+            MDLabel:
+                theme_text_color: 'Custom'
+                text_color: rgba('#92a3ab')
+                pos_hint: {"top":1,"x":-.8}
+                text:"Hello"
+            

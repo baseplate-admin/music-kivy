@@ -1,13 +1,19 @@
+#:include screens/Screen_1/components/MusicList/main.kv
+#:include screens/Screen_1/components/MusicList/DropDownMenu/main.kv
+
 <ScreenOne>
     name: "scr 1"
 
-    MDToolbar:
-        id: toolbar
-        pos_hint: {"top": 1}
-        elevation: 10
-        title: "MDNavigationDrawer"
-        left_action_items: [["menu", lambda x: app.root.ids.nav_drawer.set_state("open")]]
+    MDGridLayout:
+        id: scr_1_music_list_box
+        cols: 1
 
-    MDLabel:
-        text: "Screen 1"
-        halign: "center"
+        MDToolbar:
+            id: toolbar
+            pos_hint: {"top": 1}
+            title: "MDNavigationDrawer"
+            left_action_items: [["menu", lambda x: app.root.ids.nav_drawer.set_state("open")]]
+
+
+        ScrollView:
+            id: scr_1_music_list
