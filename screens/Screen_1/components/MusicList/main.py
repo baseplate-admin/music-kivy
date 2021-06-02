@@ -3,6 +3,7 @@ import os
 from kivy.utils import get_color_from_hex
 from kivy.properties import StringProperty
 from kivy.metrics import dp
+from kivy.clock import Clock
 
 from kivymd.uix.list import TwoLineAvatarIconListItem
 from kivymd.uix.menu import MDDropdownMenu
@@ -18,6 +19,9 @@ class MusicListWithDropdown(TwoLineAvatarIconListItem):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        Clock.schedule_once(self.post_init, 0)
+
+    def post_init(self, *args):
         self.menu_background = get_color_from_hex("#191b1f")
 
         menu_items = [
