@@ -12,12 +12,14 @@
                 on_press:
                     app.root.ids.nav_drawer.set_state("close")
                     app.root.ids.screen_manager.current = "scr 1"
+                    app.root.ids.screen_manager.transition.direction = 'right'
 
             OneLineListItem:
                 text: "Screen 2"
                 on_press:
                     app.root.ids.nav_drawer.set_state("close")
                     app.root.ids.screen_manager.current = "scr 2"
+                    app.root.ids.screen_manager.transition.direction = 'right'
 
 
 Screen:

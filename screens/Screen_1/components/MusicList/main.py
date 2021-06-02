@@ -1,22 +1,23 @@
 import os
 
 from kivy.utils import get_color_from_hex
+from kivy.properties import StringProperty
+from kivy.metrics import dp
 
 from kivymd.uix.list import TwoLineAvatarIconListItem
 from kivymd.uix.menu import MDDropdownMenu
-
-from kivy.metrics import dp
 
 from .DropDownMenu.main import Item
 
 
 class MusicListWithDropdown(TwoLineAvatarIconListItem):
+    right_text = StringProperty()
+
     left_icon = "github"
-    right_icon = f"{os.getcwd()}/assets/Icons/baseline_arrow_drop_down_white_24dp.png"
+    right_icon = 'dots-vertical'
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
         self.menu_background = get_color_from_hex("#191b1f")
 
         menu_items = [
