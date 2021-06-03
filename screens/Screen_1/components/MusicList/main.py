@@ -1,9 +1,6 @@
-import os
-
 from kivy.utils import get_color_from_hex
 from kivy.properties import StringProperty
 from kivy.metrics import dp
-from kivy.clock import Clock
 
 from kivymd.uix.list import TwoLineAvatarIconListItem
 from kivymd.uix.menu import MDDropdownMenu
