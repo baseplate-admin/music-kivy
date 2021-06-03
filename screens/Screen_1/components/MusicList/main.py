@@ -17,11 +17,11 @@ class MusicListWithDropdown(TwoLineAvatarIconListItem):
     left_icon = "github"
     right_icon = 'dots-vertical'
 
+    right_icon_background = get_color_from_hex('#ffffff')
+    right_icon_color = get_color_from_hex('#000000')
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        Clock.schedule_once(self.post_init, 0)
-
-    def post_init(self, *args):
         self.menu_background = get_color_from_hex("#191b1f")
 
         menu_items = [
