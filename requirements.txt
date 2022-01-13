@@ -9,7 +9,7 @@ kivy-deps.gstreamer==0.3.2
 kivy-deps.sdl2==0.3.1
 Kivy-Garden==0.1.4
 kivymd @ git+https://github.com/kivymd/KivyMD.git@3b047b7dd76b5c13ab3d320af6a859d7db143066
-Pillow==8.3.2
+Pillow==9.0.0
 Pygments==2.9.0
 pypiwin32==223
 pywin32==301
